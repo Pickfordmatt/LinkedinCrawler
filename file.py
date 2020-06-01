@@ -145,7 +145,9 @@ def search(comp,emailformat):
                                                 name = cut[0]+" "+cut[1]
 						if name not in names:
 							jobtext = tag.find("p", {"class" : "lh-16"});
-							job = jobtext.getText()
+							job = ""
+							if jobtext is not None:
+								job = jobtext.getText()
 							href = tag.find("a");
 							linkpof = ""
 							linkpof = href['href']
